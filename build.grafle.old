@@ -1,0 +1,80 @@
+// buildscript {
+//     repositories {
+//         google()
+//         jcenter { url "https://jcenter.bintray.com/" }
+//         maven {url "https://repo.spring.io/plugins-release/"}
+//         mavenCentral()
+//         maven {
+//             url "$rootDir/../node_modules/react-native/android"
+//         }
+//         maven {
+//             url 'https://maven.google.com'
+//         }
+//         google()
+//     }
+
+//     dependencies {
+//         classpath 'com.android.tools.build:gradle:3.4.1'
+//     }
+// }
+
+// apply plugin: 'com.android.library'
+
+// android {
+//     compileSdkVersion 30
+//     buildToolsVersion "30.0.3"
+
+//     defaultConfig {
+//         minSdkVersion 16
+//         targetSdkVersion 24
+//         versionCode 1
+//         versionName "1.0"
+//     }
+//     lintOptions {
+//         abortOnError false
+//     }
+//     sourceSets {
+//         main {
+//             aidl.srcDirs = ['src/main/java']
+//         }
+//     }
+// }
+
+// allprojects {
+//     repositories {
+//         mavenLocal()
+//         jcenter()
+//         maven {
+//             url 'https://maven.google.com'
+//         }
+//         maven {
+//             url "$rootDir/../node_modules/react-native/android"
+//         }
+//     }
+// }
+
+// repositories {
+//     jcenter { url "https://jcenter.bintray.com/" }
+//     maven {url "https://repo.spring.io/plugins-release/"}
+//     mavenCentral()
+//     maven {
+//         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+//         url "$rootDir/../node_modules/react-native/android"
+//     }
+//     maven {
+//         url 'https://maven.google.com'
+//     }
+// }
+
+// def safeExtGet(prop, fallback) {
+//     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+// }
+
+// dependencies {
+//     implementation fileTree(dir: 'libs', include: ['*.jar'])
+//     implementation group: 'com.facebook.react', name: 'react-native', version: '0.55.3'
+//     implementation "com.google.zxing:core:3.3.0"
+//     implementation "com.android.support:support-v4:${safeExtGet('supportLibVersion', '28.0.0')}"
+//     implementation files('libs/com.datecs.api.jar')
+// }
+  
