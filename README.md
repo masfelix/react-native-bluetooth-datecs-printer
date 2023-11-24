@@ -31,5 +31,5 @@
 ## Usage
 
 ```javascript
-import { RNBluetoothDatecsPrinter} from 'react-native-bluetooth-datecs-printer';
+import { RNBluetoothDatecsPrinter } from 'react-native-bluetooth-datecs-printer';
 ```

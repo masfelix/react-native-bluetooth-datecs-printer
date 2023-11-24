@@ -15,9 +15,6 @@
   "author": "Marcos Felix",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.41.2"
-  },
-  "engines": {
-    "node": "16.20.1"
+    "react-native": "^0.72.7"
   }
 }
