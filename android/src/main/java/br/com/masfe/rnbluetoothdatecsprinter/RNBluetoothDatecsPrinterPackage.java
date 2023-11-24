@@ -13,8 +13,8 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNBluetoothDatecsPrinterPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      BluetoothService  bluetoothService = new BluetoothService();
-      return Arrays.<NativeModule>asList(new RNBluetoothDatecsPrinter(reactContext, bluetoothService));
+      BluetoothService  bluetoothService = new BluetoothService(reactContext);
+      return Arrays.<NativeModule>asList(new RNBluetoothDatecsPrinterModule(reactContext, bluetoothService));
     }
 
     // Deprecated from RN 0.47
