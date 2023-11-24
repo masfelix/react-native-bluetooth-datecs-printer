@@ -295,19 +295,19 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
             promiseMap.put(PROMISE_ENABLE_BT, promise);
             this.reactContext.startActivityForResult(enableIntent, REQUEST_ENABLE_BT, Bundle.EMPTY);
         } else {
-            WritableArray pairedDeivce =Arguments.createArray();
+            WritableArray pairedDevice =Arguments.createArray();
             Set<BluetoothDevice> boundDevices = adapter.getBondedDevices();
             for (BluetoothDevice d : boundDevices) {
                 try {
                     JSONObject obj = new JSONObject();
                     obj.put("name", d.getName());
                     obj.put("address", d.getAddress());
-                    pairedDeivce.pushString(obj.toString());
+                    pairedDevice.pushString(obj.toString());
                 } catch (Exception e) {
                     //ignore.
                 }
             }Log.d(TAG,"ble Enabled");
-            promise.resolve(pairedDeivce);
+            promise.resolve(pairedDevice);
         }
     }
 
@@ -346,7 +346,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
             }
 
 
-            pairedDeivce = new JSONArray();
+            pairedDevice = new JSONArray();
             foundDevice = new JSONArray();
             Set<BluetoothDevice> boundDevices = adapter.getBondedDevices();
             for (BluetoothDevice d : boundDevices) {
@@ -354,14 +354,14 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
                     JSONObject obj = new JSONObject();
                     obj.put("name", d.getName());
                     obj.put("address", d.getAddress());
-                    pairedDeivce.put(obj);
+                    pairedDevice.put(obj);
                 } catch (Exception e) {
                     //ignore.
                 }
             }
 
             WritableMap params = Arguments.createMap();
-            params.putString("devices", pairedDeivce.toString());
+            params.putString("devices", pairedDevice.toString());
             emitRNEvent(EVENT_DEVICE_ALREADY_PAIRED, params);
             if (!adapter.startDiscovery()) {
                 promise.reject("DISCOVER", "NOT_STARTED");
@@ -452,19 +452,19 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
                     if (resultCode == Activity.RESULT_OK && promise != null) {
                         // Bluetooth is now enabled, so set up a session
                         if(adapter!=null){
-                            WritableArray pairedDeivce =Arguments.createArray();
+                            WritableArray pairedDevice =Arguments.createArray();
                             Set<BluetoothDevice> boundDevices = adapter.getBondedDevices();
                             for (BluetoothDevice d : boundDevices) {
                                 try {
                                     JSONObject obj = new JSONObject();
                                     obj.put("name", d.getName());
                                     obj.put("address", d.getAddress());
-                                    pairedDeivce.pushString(obj.toString());
+                                    pairedDevice.pushString(obj.toString());
                                 } catch (Exception e) {
                                     //ignore.
                                 }
                             }
-                            promise.resolve(pairedDeivce);
+                            promise.resolve(pairedDevice);
                         }else{
                             promise.resolve(null);
                         }
@@ -540,14 +540,14 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
                     JSONObject result = null;
                     try {
                         result = new JSONObject();
-                        result.put("paired", pairedDeivce);
+                        result.put("paired", pairedDevice);
                         result.put("found", foundDevice);
                         promise.resolve(result.toString());
                     } catch (Exception e) {
                         //ignore
                     }
                     WritableMap params = Arguments.createMap();
-                    params.putString("paired", pairedDeivce.toString());
+                    params.putString("paired", pairedDevice.toString());
                     params.putString("found", foundDevice.toString());
                     emitRNEvent(EVENT_DEVICE_DISCOVER_DONE, params);
                 }
