@@ -1,6 +1,6 @@
 {
   "name": "react-native-bluetooth-datecs-printer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Module to printer in a Datecs bluetooth Printer",
   "main": "index.js",
   "scripts": {
