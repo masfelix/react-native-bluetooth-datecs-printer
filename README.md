@@ -2,7 +2,7 @@
 
 ## Getting started
 
-`$npm react-native-bluetooth-datecs-printer --save`
+`$npm install react-native-bluetooth-datecs-printer --save`
 
 ### Mostly automatic installation
 
