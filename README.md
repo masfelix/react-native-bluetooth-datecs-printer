@@ -27,6 +27,15 @@
    ```
      implementation project(':react-native-bluetooth-datecs-printer')
    ```
+4. Insert the following lines inside the `android/app/serc/main/AndroidManifest.xml` 
+
+   ```
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+   ```
 
 ## Usage
 
