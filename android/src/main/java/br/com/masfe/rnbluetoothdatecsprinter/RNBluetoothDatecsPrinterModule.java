@@ -268,7 +268,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * @param imageHeight  The height of the image to be printed.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-  private void printImage(String imagePath, int imageWidth = 300, int imageHeight = 300) throws IOException {
+  private void printImage(String imagePath, int imageWidth, int imageHeight) throws IOException {
     byte[] decodedString = Base64.decode(imagePath, Base64.DEFAULT);
     Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
