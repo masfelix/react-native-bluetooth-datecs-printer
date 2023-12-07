@@ -139,13 +139,15 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * Initiates the printing of a template using a printer.
    *
    * @param template The template to be printed.
+   * @param width    The width to be printed.
+   * @param height   The height to be printed.
    * @param promise  A Promise object used to handle the result of the printing operation.
    *                Resolves the promise if the printing is successful, otherwise catches an IOException.
    */
   @ReactMethod
-  public void printerTemplate(String template, final Promise promise) {
+  public void printerTemplate(String template, Number width, Number height, final Promise promise) {
     try {
-        initPrinter(mSocket.getInputStream(), mSocket.getOutputStream(), template);
+        initPrinter(mSocket.getInputStream(), mSocket.getOutputStream(), template, width, height);
         promise.resolve(null);
     } catch (IOException e) {
         return;
@@ -158,9 +160,11 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * @param inputStream  The input stream for communication with the printer.
    * @param outputStream The output stream for communication with the printer.
    * @param template     The template to be printed.
+   * @param width        The width to be printed.
+   * @param height       The height to be printed.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-  public void initPrinter(InputStream inputStream, OutputStream outputStream, String template) throws IOException {
+  public void initPrinter(InputStream inputStream, OutputStream outputStream, String template, Number width, Number height) throws IOException {
 
       mProtocolAdapter = new ProtocolAdapter(inputStream, outputStream);
       if (mProtocolAdapter.isProtocolEnabled()) {
