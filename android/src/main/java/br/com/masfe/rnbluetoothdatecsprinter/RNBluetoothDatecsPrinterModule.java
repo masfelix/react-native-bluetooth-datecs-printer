@@ -145,7 +145,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    *                Resolves the promise if the printing is successful, otherwise catches an IOException.
    */
   @ReactMethod
-  public void printerTemplate(String template, int imageWidth, int height, final Promise promise) {
+  public void printerTemplate(String template, int imageWidth, int imageHeight, final Promise promise) {
     try {
         initPrinter(mSocket.getInputStream(), mSocket.getOutputStream(), template, imageWidth, imageHeight);
         promise.resolve(null);
