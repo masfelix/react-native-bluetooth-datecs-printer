@@ -139,15 +139,15 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * Initiates the printing of a template using a printer.
    *
    * @param template The template to be printed.
-   * @param width    The width to be printed.
-   * @param height   The height to be printed.
+   * @param imageWidth    The width to be printed.
+   * @param imageHeight   The height to be printed.
    * @param promise  A Promise object used to handle the result of the printing operation.
    *                Resolves the promise if the printing is successful, otherwise catches an IOException.
    */
   @ReactMethod
-  public void printerTemplate(String template, Number width, Number height, final Promise promise) {
+  public void printerTemplate(String template, Number imageWidth, Number height, final Promise promise) {
     try {
-        initPrinter(mSocket.getInputStream(), mSocket.getOutputStream(), template, width, height);
+        initPrinter(mSocket.getInputStream(), mSocket.getOutputStream(), template, imageWidth, imageHeight);
         promise.resolve(null);
     } catch (IOException e) {
         return;
@@ -180,7 +180,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
           mPrinter.beep();
           mPrinter.reset();
 
-          printTemplate(template);
+          printTemplate(template, width, height);
 
           mPrinter.feedPaper(150);
           mPrinter.flush();
@@ -194,9 +194,11 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * Parses and prints a template content that may contain text and images.
    *
    * @param template The template to be printed, containing text and image tags.
+   * @param imageWidth    The width to be printed
+   * @param imageHeight   The height to be printed
    * @throws IOException Signals that an I/O exception has occurred.
    */
-  private void printTemplate(String template) throws IOException {
+  private void printTemplate(String template, Number imageWidth, Number imageHeight) throws IOException {
 
     String imageRegex = "\\{image\\=([0-9a-zA-Z\\+/=]{20,})\\}";
 
@@ -214,7 +216,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
                 mPrinter.printTaggedText(templateTexto,"ISO-8859-1");
             }
             if(i<imagesArraySize) {
-                printImage(imagesSource[i]);
+                printImage(imagesSource[i], imageWidth, imageHeight);
             }
             i++;
         }
@@ -262,13 +264,15 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * Prints an image represented by a Base64 encoded string.
    *
    * @param imagePath The Base64 encoded string representing the image.
+   * @param imageWidth   The width of the image to be printed.
+   * @param imageHeight  The height of the image to be printed.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-  private void printImage(String imagePath) throws IOException {
+  private void printImage(String imagePath, Number imageWidth, Number imageHeight) throws IOException {
     byte[] decodedString = Base64.decode(imagePath, Base64.DEFAULT);
     Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
-    Bitmap scaledBitmap = Bitmap.createScaledBitmap(decodedByte, 300, 300, true); 
+    Bitmap scaledBitmap = Bitmap.createScaledBitmap(decodedByte, imageWidth, imageHeight, true); 
 
     final int width = scaledBitmap.getWidth();
     final int height = scaledBitmap.getHeight();
