@@ -160,11 +160,11 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
    * @param inputStream  The input stream for communication with the printer.
    * @param outputStream The output stream for communication with the printer.
    * @param template     The template to be printed.
-   * @param width        The width to be printed.
-   * @param height       The height to be printed.
+   * @param imageWidth        The width to be printed.
+   * @param imageHeight       The height to be printed.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-  public void initPrinter(InputStream inputStream, OutputStream outputStream, String template, Number width, Number height) throws IOException {
+  public void initPrinter(InputStream inputStream, OutputStream outputStream, String template, int imageWidth, int imageHeight) throws IOException {
 
       mProtocolAdapter = new ProtocolAdapter(inputStream, outputStream);
       if (mProtocolAdapter.isProtocolEnabled()) {
@@ -180,7 +180,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
           mPrinter.beep();
           mPrinter.reset();
 
-          printTemplate(template, width, height);
+          printTemplate(template, imageWidth, imageHeight);
 
           mPrinter.feedPaper(150);
           mPrinter.flush();
