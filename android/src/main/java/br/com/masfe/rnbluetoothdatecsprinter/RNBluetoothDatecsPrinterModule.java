@@ -280,7 +280,7 @@ public class RNBluetoothDatecsPrinterModule extends ReactContextBaseJavaModule  
     scaledBitmap.getPixels(argb, 0, width, 0, 0, width, height);
     scaledBitmap.recycle(); 
 
-    mPrinter.printImage(argb, width, height, Printer.ALIGN_CENTER, true,false); 
+    mPrinter.printCompressedImage(argb, width, height, Printer.ALIGN_CENTER, true); 
   }
 
     /**
