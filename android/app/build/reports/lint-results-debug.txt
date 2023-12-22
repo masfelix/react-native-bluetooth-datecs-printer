@@ -1,0 +1,158 @@
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\BluetoothService.java:125: Error: Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+            bundle.put(DEVICE_NAME, device.getName());
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\BluetoothService.java:202: Error: Missing permissions required by BluetoothAdapter.cancelDiscovery: android.permission.BLUETOOTH_SCAN [MissingPermission]
+            mAdapter.cancelDiscovery();
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\BluetoothService.java:221: Error: Missing permissions required by BluetoothDevice.createRfcommSocketToServiceRecord: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                    tmp = mmDevice.createRfcommSocketToServiceRecord(MY_UUID);
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\BluetoothService.java:238: Error: Missing permissions required by BluetoothSocket.connect: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                mmSocket.connect();
+                ~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\BluetoothService.java:267: Error: Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+            bundle.put(DEVICE_NAME, mmDevice.getName());
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:317: Error: Missing permissions required by BluetoothAdapter.getBondedDevices: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+            Set<BluetoothDevice> boundDevices = adapter.getBondedDevices();
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:321: Error: Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                    obj.put("name", d.getName());
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:341: Error: Missing permissions required by BluetoothAdapter.disable: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+            promise.resolve(!adapter.isEnabled() || adapter.disable());
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:369: Error: Missing permissions required by BluetoothAdapter.getBondedDevices: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+            Set<BluetoothDevice> boundDevices = adapter.getBondedDevices();
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:373: Error: Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                    obj.put("name", d.getName());
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:384: Error: Missing permissions required by BluetoothAdapter.startDiscovery: android.permission.BLUETOOTH_SCAN [MissingPermission]
+            if (!adapter.startDiscovery()) {
+                 ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:432: Error: Missing permissions required by BluetoothAdapter.isDiscovering: android.permission.BLUETOOTH_SCAN [MissingPermission]
+            if (adapter!=null && adapter.isDiscovering()) {
+                                 ~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:433: Error: Missing permissions required by BluetoothAdapter.cancelDiscovery: android.permission.BLUETOOTH_SCAN [MissingPermission]
+                adapter.cancelDiscovery();
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:474: Error: Missing permissions required by BluetoothAdapter.getBondedDevices: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                            Set<BluetoothDevice> boundDevices = adapter.getBondedDevices();
+                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:478: Error: Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                                    obj.put("name", d.getName());
+                                        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:537: Error: Missing permissions required by BluetoothDevice.getBondState: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
+                    ~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:540: Error: Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT [MissingPermission]
+                        deviceFound.put("name", device.getName());
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MissingPermission":
+   This check scans through your code and libraries and looks at the APIs
+   being used, and checks this against the set of permissions required to
+   access those APIs. If the code using those APIs is called at runtime, then
+   the program will crash.
+
+   Furthermore, for permissions that are revocable (with targetSdkVersion 23),
+   client code must also be prepared to handle the calls throwing an exception
+   if the user rejects the request for permission at runtime.
+
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:327: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+            }Log.d(TAG,"ble Enabled");
+                   ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:425: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+            Log.e(TAG, e.getMessage());
+                  ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:435: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+            Log.d(TAG, "Discover canceled");
+                  ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:449: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+            Log.d(TAG, "onActivityResult " + resultCode);
+                  ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:492: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+                        Log.d(TAG, "BT not enabled");
+                              ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:532: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+            Log.d(TAG, "on receive:" + action);
+                  ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:584: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+      Log.d(TAG,"on bluetoothServiceStatChange:"+state);
+            ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:596: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+              if (p == null) {   Log.d(TAG,"No Promise found.");
+                                       ~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\java\br\com\masfe\rnbluetoothdatecsprinter\RNBluetoothDatecsPrinterModule.java:600: Error: The logging tag can be at most 23 characters, was 24 (RNBluetoothDatecsPrinter) [LongLogTag]
+              } else { Log.d(TAG,"Promise Resolve.");
+                             ~~~
+
+   Explanation for issues of type "LongLogTag":
+   Log tags are only allowed to be at most 23 tag characters long.
+
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:17: Warning: The resource @dimen/abc_edit_text_inset_horizontal_material is marked as private in androidx.appcompat:appcompat:1.6.1 [PrivateResource]
+       android:insetLeft="@dimen/abc_edit_text_inset_horizontal_material"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:18: Warning: The resource @dimen/abc_edit_text_inset_horizontal_material is marked as private in androidx.appcompat:appcompat:1.6.1 [PrivateResource]
+       android:insetRight="@dimen/abc_edit_text_inset_horizontal_material"
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:19: Warning: The resource @dimen/abc_edit_text_inset_top_material is marked as private in androidx.appcompat:appcompat:1.6.1 [PrivateResource]
+       android:insetTop="@dimen/abc_edit_text_inset_top_material"
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:20: Warning: The resource @dimen/abc_edit_text_inset_bottom_material is marked as private in androidx.appcompat:appcompat:1.6.1 [PrivateResource]
+       android:insetBottom="@dimen/abc_edit_text_inset_bottom_material">
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:32: Warning: The resource @drawable/abc_textfield_default_mtrl_alpha is marked as private in androidx.appcompat:appcompat:1.6.1 [PrivateResource]
+        <item android:state_enabled="false" android:drawable="@drawable/abc_textfield_default_mtrl_alpha"/>
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:33: Warning: The resource @drawable/abc_textfield_activated_mtrl_alpha is marked as private in androidx.appcompat:appcompat:1.6.1 [PrivateResource]
+        <item android:drawable="@drawable/abc_textfield_activated_mtrl_alpha"/>
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PrivateResource":
+   Private resources should not be referenced; the may not be present
+   everywhere, and even where they are they may disappear without notice.
+
+   To fix this, copy the resource into your own project instead.
+
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\build.gradle: Warning: The resource R.integer.react_native_dev_server_port appears to be unused [UnusedResources]
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\build.gradle: Warning: The resource R.integer.react_native_inspector_proxy_port appears to be unused [UnusedResources]
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: The resource R.mipmap.ic_launcher appears to be unused [UnusedResources]
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\mipmap-hdpi\ic_launcher_round.png: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\drawable\rn_edit_text_material.xml:16: Warning: The resource R.drawable.rn_edit_text_material appears to be unused [UnusedResources]
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\values\strings.xml:2: Warning: The resource R.string.app_name appears to be unused [UnusedResources]
+    <string name="app_name">react-native-bluetooth-datecs-printer</string>
+            ~~~~~~~~~~~~~~~
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\main\res\values\styles.xml:4: Warning: The resource R.style.AppTheme appears to be unused [UnusedResources]
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+           ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\projetos\masfelix\react-native-bluetooth-datecs-printer\android\app\src\debug\AndroidManifest.xml:5: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+26 errors, 14 warnings
