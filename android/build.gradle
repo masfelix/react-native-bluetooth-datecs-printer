@@ -1,5 +1,23 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.facebook.react'
+    buildscript {
+        repositories {
+            jcenter { url "https://jcenter.bintray.com/" }
+            maven {url "https://repo.spring.io/plugins-release/"}
+            mavenCentral()
+            maven {
+                url "$rootDir/../node_modules/react-native/android"
+            }
+            maven {
+                url 'https://maven.google.com'
+            }
+        }
+
+        dependencies {
+            classpath 'com.android.tools.build:gradle:3.1.4'
+        }
+    }
+
+    apply plugin: 'com.android.library'
+    apply plugin: 'com.facebook.react'
 
 android {
     compileSdkVersion 30
